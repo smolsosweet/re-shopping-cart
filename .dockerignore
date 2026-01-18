@@ -1,35 +1,32 @@
-# Git
-.git
-.gitignore
-.gitattributes
+# Build artifacts
+build/
+bin/
+out/
+.gradle/
+*.class
+*.jar
+*.war
+*.ear
 
-# IDE
-.idea
-.vscode
+# IDE files
+.idea/
+.vscode/
 *.iml
 *.ipr
 *.iws
 .classpath
 .project
-.settings
+.settings/
+.apt_generated/
 
-# Build outputs
-build/
-.gradle
-bin/
-out/
-*.class
-*.jar
-!build/libs/*.jar
+# Version control
+.git/
+.gitignore
+.gitattributes
 
 # Documentation
 *.md
-README.md
 HELP.md
-
-# CI/CD
-.github/
-ci-cd.yaml
 
 # Environment files (will be provided at runtime)
 .env
@@ -38,18 +35,20 @@ ci-cd.yaml
 
 # Test files
 src/test/
+*.test
+test-results/
 
 # OS files
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+*~
+
+# CI/CD files (not needed in image)
+.github/
+ci-cd.yaml
 
 # Logs
 *.log
 logs/
-
-# Temporary files
-tmp/
-*.tmp
-*.swp
-*.swo
-*~
